@@ -6,5 +6,10 @@ function nice(name) {
 }
 
 nice("sara");
-nice("mohammad");
-nice("sara");
+
+function add(a, b) {
+    return a + b;
+}
+
+let result = add(5, 10);
+console.log("thes sum of these numbers is: " + result);
