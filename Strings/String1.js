@@ -10,3 +10,11 @@ console.log(a[6])
 console.log(a[7])
 console.log(a[8])
 console.log(a[9])
+
+console.log(a.length)
+
+let real_name="Sangharsh"
+let friend="Sumit"
+console.log("His name is "+real_name+" and his friend's name is "+ friend)
+
+console.log(`his name is ${real_name} and his friend's name is ${friend}`)
