@@ -11,5 +11,3 @@ console.log("In Shivam121 replace 121 by 123 "+b.replace("121","123"))
 console.log("Shivam121 concat itself "+b.concat(b))
 console.log("Shivam121 concat itself with space "+b.concat(" ",b))
 console.log("Shivam121 remove spaces for start and end "+b.concat("  1  ".trim()))
-
-
