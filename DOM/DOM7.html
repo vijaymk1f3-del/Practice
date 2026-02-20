@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .green{
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container Blue">
+        <div class="box red">red</div>
+        <div class="box black">black</div>
+        <div class="box color">green</div>
+    </div>
+    <script>
+        let cont=document.querySelector('.container');
+        console.log(cont.classList);
+        cont.classList.add('yellow');
+        console.log(cont.classList);
+        cont.classList.remove('Blue');
+        console.log(cont.classList);
+        
+        setInterval(()=>{
+            document.querySelector(".color").classList.toggle("green")//If the class is true the it will be false if it is false then it will be true
+        },2000)
+    </script>
+</body>
+</html>
