@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding: 20px;
+            margin: 12px;
+            border: 1px solid black;
+            background-color: aqua;
+        }
+
+        .smallcontainer {
+            padding: 20px;
+            margin: 12px;
+            border: 1px solid black;
+            background-color: rgb(41, 173, 65);
+        }
+
+        .box {
+            padding: 20px;
+            margin: 12px;
+            border: 1px solid black;
+            background-color: rgb(17, 0, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Event Bubbling -->
+    <div class="container">
+        <section class="smallcontainer">
+            <div class="box">Hello! I am a box</div>
+        </section>
+    </div>
+    <script>
+        let randomColor=()=>{
+        r=Math.floor(Math.random()*255);
+        g=Math.floor(Math.random()*255);
+        b=Math.floor(Math.random()*255);
+        return `rgb(${r},${g},${b})`;
+        }
+        a=setInterval(() => {
+            document.querySelector(".box").style.backgroundColor=randomColor();
+        }, 2000);
+        b=setTimeout(() => {
+                        document.querySelector(".container").style.backgroundColor=randomColor();
+        }, 3000);
+        //clear timeout(b) - stop the timeout
+        //clearInterval(a) - stop the interval
+    </script>
+</body>
+
+</html>
+</body>
+</html>
