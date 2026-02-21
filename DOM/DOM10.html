@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding: 20px;
+            margin: 12px;
+            border: 1px solid black;
+            background-color: aqua;
+        }
+
+        .smallcontainer {
+            padding: 20px;
+            margin: 12px;
+            border: 1px solid black;
+            background-color: rgb(41, 173, 65);
+        }
+
+        .box {
+            padding: 20px;
+            margin: 12px;
+            border: 1px solid black;
+            background-color: rgb(17, 0, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Event Bubbling -->
+    <div class="container" onclick="container(event)">
+        <section class="smallcontainer" onclick="smallcontainer(event)">
+            <div class="box" onclick="box(event)">Hello! I am a box</div>
+        </section>
+    </div>
+    <script>
+        box = (e) => {
+            e.stopPropagation();
+            alert("I am a box");
+        }
+        smallcontainer = (e) => {
+            e.stopPropagation();
+            alert("I am a small container");
+        }
+        container = (e) => {
+            alert("I am a container");
+        }
+    </script>
+</body>
+
+</html>
