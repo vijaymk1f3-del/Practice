@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="box" onclick="alert(`I Loudly sayed Hello World!`)">Hello World!</div>
+    <div class="box2">Hello me</div>
+    <div class="box3" onclick="hello()">Hello my friend</div>
+</body>
+<script>
+    //Event Handlers are fuctions that runs when event start
+    document.querySelector(".box2").ondblclick=function(){
+        alert("I Loudly sayed Hello me!")
+    }
+    function hello(){
+        alert("I loudly said Hello my friend!")
+    }
+    //use element.removeEventListener to remove event handler
+</script>
+</html>
