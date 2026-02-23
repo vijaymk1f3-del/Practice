@@ -6,9 +6,21 @@ if(isNaN(a)||isNaN(b)){
 }
 let sum = parseInt(a) + parseInt(b);
 
-try {
-    console.log("The sum is " + sum*x)
+function main(){
+
+    let x=3;
     
-} catch (error) {
-    console.log("Error aa gya bhai")
+    try {
+        console.log("The sum is " + sum*x)
+        return true;
+        
+    } catch (error) {
+        console.log("Error aa gya bhai")
+        return false;
+    }
+    finally{
+        console.log("Files are being closed and db connectionis being closed");
+    }
 }
+let c=main()
+console.log(c);
