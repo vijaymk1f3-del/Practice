@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+        body {
+            background-color: rgb(7, 105, 7);
+            color: white;
+            font-size: 25px;
+            font-family: "Vollkorn", serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>Starting Hacking Process</div>
+    </div>
+    <script>
+        
+        const addItem = async (item) => {
+            await randomDelay();
+            div = document.createElement("div");
+            div.className = "massage";
+            div.innerText = item;
+            document.querySelector(".container").append(div);
+        }
+        
+        async function randomDelay() {
+            let random = Math.floor(Math.random() * 5) + 3;
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve();
+                }, random * 1000)
+            })
+        }
+        
+        async function main() {
+            t = setInterval(()=>{
+            let last=document.body.getElementsByTagName("div");
+            last=last[last.length-1]
+            if(last.innerHTML.endsWith("...")){
+                last.innerHTML=last.innerHTML.slice(0,last.innerHTML.length-3)
+            }
+            else{
+                last.innerHTML=last.innerHTML+'.'
+            }
+            },100)
+
+            
+            let msg = ["Initializing Hacking", "Reading your Files", "Password files Detected", "Sending all passwords and personal files to server", "Cleaning up"];
+            
+            for (item of msg) {
+                console.log(item)
+                await addItem(item);
+            }
+            await randomDelay();
+            clearInterval(t);
+        }
+        main();
+
+    </script>
+</body>
+
+</html>
+<!-- 
+
+        async function main() {
+
+            let t = setInterval(() => {
+                let last = document.body.getElementsByTagName("div");
+                last = last[last.length - 1]
+                if(last.innerHTML.endsWith("...")){
+                    last.innerHTML = last.innerHTML.slice(0, last.innerHTML.length-3)
+                }
+                else{
+
+                    last.innerHTML = last.innerHTML + "."
+                }
+
+            }, 100);
+
+
+            let text = ["Initialized Hacking now reading your data",
+                "Reading your Files",
+                "Password files Detected",
+                "Sending all passwords and personal files to server",
+                "Cleaning up"]
+
+            for (const item of text) {
+                await addItem(item)
+            }
+
+            await randomDelay()
+            clearInterval(t)
+            
+        }
+        main()
+
+
+-->
